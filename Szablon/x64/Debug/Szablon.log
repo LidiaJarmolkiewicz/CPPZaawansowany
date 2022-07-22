@@ -1,8 +1,2 @@
 ﻿  Szablon.cpp
-D:\SDA\CPPObjektowosc\Szablon\Szablon.cpp(42,20): warning C4018: '<': signed/unsigned mismatch
-D:\SDA\CPPObjektowosc\Szablon\Szablon.cpp(68): message : see reference to function template instantiation 'T max<int>(T *,const unsigned int)' being compiled
-          with
-          [
-              T=int
-          ]
-  Szablon.vcxproj -> D:\SDA\Algorytmy\LinkedList\x64\Debug\Szablon.exe
+  Szablon.vcxproj -> D:\SDA\Algorytmy\ListOneWay\x64\Debug\Szablon.exe
