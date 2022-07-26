@@ -1,0 +1,3 @@
+﻿  SetZadanie3MagicLambda.cpp
+D:\SDA\CPPZaawansowany\SetZadanie3MagicLambda\SetZadanie3MagicLambda.cpp(23): warning C4715: '`containsAllLetters3'::`2'::<lambda_1>::operator()': not all control paths return a value
+  SetZadanie3MagicLambda.vcxproj -> D:\SDA\CPPZaawansowany\ListaZadanie2\x64\Debug\SetZadanie3MagicLambda.exe
