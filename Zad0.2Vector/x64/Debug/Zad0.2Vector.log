@@ -1,0 +1,13 @@
+﻿  Zad0.2Vector.cpp
+D:\SDA\CPPZaawansowany\Zad0.2Vector\Zad0.2Vector.cpp(42,14): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+D:\SDA\CPPZaawansowany\Zad0.2Vector\Zad0.2Vector.cpp(49,21): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+D:\SDA\CPPZaawansowany\Zad0.2Vector\Zad0.2Vector.cpp(60,14): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\algorithm(511,18): error C2451: a conditional expression of type 'void' is not valid
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\algorithm(511,18): message : Expressions of type void cannot be converted to other types
+D:\SDA\CPPZaawansowany\Zad0.2Vector\Zad0.2Vector.cpp(60): message : see reference to function template instantiation '__int64 std::count_if<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,main::<lambda_6>>(_InIt,_InIt,_Pr)' being compiled
+          with
+          [
+              _Ty=int,
+              _InIt=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<int>>>,
+              _Pr=main::<lambda_6>
+          ]
