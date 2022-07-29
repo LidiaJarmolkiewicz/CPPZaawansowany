@@ -1,0 +1,5 @@
+﻿  Zad0.3Vector200.cpp
+D:\SDA\CPPZaawansowany\Zad0.3Vector200\Zad0.3Vector200.cpp(22): warning C4715: '`main'::`8'::<lambda_2>::operator()': not all control paths return a value
+D:\SDA\CPPZaawansowany\Zad0.3Vector200\Zad0.3Vector200.cpp(38): warning C4715: '`main'::`13'::<lambda_4>::operator()': not all control paths return a value
+D:\SDA\CPPZaawansowany\Zad0.3Vector200\Zad0.3Vector200.cpp(48): warning C4715: '`main'::`18'::<lambda_5>::operator()': not all control paths return a value
+  Zad0.3Vector200.vcxproj -> D:\SDA\CPPZaawansowany\ListaZadanie2\x64\Debug\Zad0.3Vector200.exe
