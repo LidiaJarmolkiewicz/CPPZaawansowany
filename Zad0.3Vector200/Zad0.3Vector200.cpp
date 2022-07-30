@@ -45,7 +45,7 @@ int main()
         std::cout << "vektor zawiera element o wartosci 0" << std::endl;
     }
     //e-czy kontener posortowany
-    if (std::none_of(vec.begin(), vec.end(), [](int x)->bool {if (x < (x + 1)) return true; }))
+    if (std::any_of(vec.begin(), vec.end(), [](int x)->bool {if (x < (x + 1)) return true; }))
     {
         std::cout << "vektor  jest posortowany" << std::endl;
     }
@@ -77,10 +77,18 @@ int main()
     };
 
     std::copy_if(vec.begin(), vec.end(), back_inserter(vec3), copyConditions78);
-    std::cout << "vec3:";
+    std::cout << "vec3: ";
     for (auto it = vec3.begin(); it != vec3.end(); ++it)
     {
         std::cout << *it << ",";
     }
-
+    std::cout << std::endl;
+    std::vector<int>vec4 = {};
+    auto it = std::find(vec.cbegin(), vec.cend(), 78);
+    std::copy(it, (it+10), back_inserter(vec4));
+    std::cout << "vec4: ";
+    for (auto it = vec4.begin(); it != vec4.end(); ++it)
+    {
+        std::cout << *it << ",";
+    }
 }
