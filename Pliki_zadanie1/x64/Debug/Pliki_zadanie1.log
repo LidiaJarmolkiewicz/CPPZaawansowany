@@ -1,0 +1,3 @@
+﻿  Pliki_zadanie1.cpp
+D:\SDA\CPPZaawansowany\Pliki_zadanie1\Pliki_zadanie1.cpp(29,30): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Pliki_zadanie1.vcxproj -> D:\SDA\CPPZaawansowany\ListaZadanie2\x64\Debug\Pliki_zadanie1.exe
