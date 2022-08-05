@@ -33,7 +33,14 @@ int main()
 		}
 		std::cout << "Podaj ilosc : " << std::endl;
 		std::getline(std::cin, number);
-		howMuch = stoi(number);
+		try {
+			howMuch = stoi(number);
+		}
+		catch(const std::out_of_range)
+		{
+			std::cout << "wartosc nieprawidlowa" << std::endl;
+		}
+		
 
 		for (int k = 0; k <product.length(); ++k)
 		{
@@ -81,29 +88,26 @@ int main()
 		std::cout << kv.first << "  " << kv.second<<std::endl;
 	}
 
+		std::string fileName("lista_zakupow.txt");
+		std::ofstream file(fileName, std::ios::out | std::ios::trunc);
+		if (file.is_open())
+		{
+			if (file.good())
+			{
+				for (auto& kv : list)
+				{
+					file << kv.first << " " << kv.second << "\n";
+				}
+			}
 
+		}
+		else
+		{
+			std::cout << "nie moge otworzyc pliku";
+			return -1;
+		}
+			file.close();
 
-		//std::string fileName("lisat_zakupow.txt");
-		//std::ofstream file(fileName, std::ios::out | std::ios::trunc);
-		//if (file.is_open())
-		//{
-		//	if (file.good())
-		//	{
-		//		for (auto& kv : list)
-		//		{
-		//			file << kv.first << " " << kv.second << "\n";
-		//		}
-		//	}
-
-		//}
-		//else
-		//{
-		//	std::cout << "nie moge otworzyc pliku";
-		//	return -1;
-		//}
-		//file.close();
-
-				
-
+		
 	return 0;
 }

@@ -1,0 +1,3 @@
+kawa 1
+lody 3
+ser zolty 10
