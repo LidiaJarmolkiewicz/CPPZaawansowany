@@ -12,84 +12,98 @@
 //Nastêpnie zapisz dane do pliku lista_zakupow.txt-np :jablko 4
 int main()
 {
-	std::string s;
+
 	std::map<std::string, int>list;
-	int n = 0;
 	std::string product;
-	std::string numberOfProd;
-	int number = 0;
-	std::cout << "Ile produktow chcesz kupic? ";
-	std::cin >> n;
-
-	for (int i = 0; i < n; ++i)
+	
+	std::string number;
+	std::string str;
+	int howMuch = 0;
+	bool end = false;
+	std::cout << "co chcesz kupiæ?, jesli skonczy³es podaj 'end'" << std::endl;
+	while(!end)
 	{
-		std::cout << "Podaj nazwe produktu : ";
-		std::getline(std::cin, s);
-
-		int x = s.find_last_of(' ');
-		for (int k = 0; k < x; ++k)
+		
+		std::cout << "Podaj nazwe produktu : " << std::endl;
+		std::getline(std::cin, product);
+		if (product == "end")
 		{
-			s[k] = std::tolower(s[k]);
-			product += s[k];
+			end = true;
+			break;
 		}
-		for (int j = x + 1; j < s.length(); ++j)
+		std::cout << "Podaj ilosc : " << std::endl;
+		std::getline(std::cin, number);
+		howMuch = stoi(number);
+
+		for (int k = 0; k <product.length(); ++k)
 		{
-			numberOfProd += s[j];
+			product[k] = std::tolower(product[k]);
+			
 		}
-		number = std::atoi(numberOfProd.c_str());
 
 
-		//auto result = std::find(list.begin(), list.end(), product);
-		if (list.find(product) != list.end())
+		auto it = list.find(product);
+		if (it == list.end())//produktu nie ma na liscie
+		{
+			list.emplace(product,howMuch);//wprowadzam do listy
+		}
+		else//istnieje na liscie
 		{
 			std::cout << " produkt" << product << " jest juz na liscie - co zrobic?" << std::endl;
 			std::cout << "podaj 1 jesli zmienic ilosc" << std::endl;
-			std::cout << "podaj 2 jesli zwiekszyc ilosc" << std::endl;
+			std::cout << "podaj 2 jesli zsumowac ilosc" << std::endl;
 			std::cout << "podaj 3 jesli pominac" << std::endl;
 
-
-			std::map<std::string, int>::iterator it = list.find(product);
-			int choice;
-			std::cin >> choice;
-			switch (choice)
+			int n = 0;
+			std::cin>> n;
+			std::cin.ignore(1);
+			if (n == 1)
 			{
-			case 1:
-				it->second = number;
-				break;
-
-			case 2:
-				it->second = it->second + number;
-				break;
-			case 3:
-				break;
+				it->second = howMuch;
 			}
-						
-		}
-		list.insert({ product, number });
-		//std::cout << product << " " << number << std::endl;
-
-
-		std::string fileName("lisat_zakupow.txt");
-		std::ofstream file(fileName, std::ios::out | std::ios::trunc);
-		if (file.is_open())
-		{
-			if (file.good())
+			else if (n == 2)
 			{
-				for (auto& kv : list)
-				{
-					file << kv.first << " " << kv.second << "\n";
-				}
+				it->second += howMuch;
+
+			}
+			else if (n == 3)
+			{
+
 			}
 
 		}
-		else
-		{
-			std::cout << "nie moge otworzyc pliku";
-			return -1;
-		}
-		file.close();
+
+	}
+	std::cout << "twoja lista zakupow :" << std::endl;
+	//std::for_each(list.begin(), list.end(), [](std::pair<const std::string, int>& item) {std::cout << item.first << " " << item.second << std::endl;   });
+	for (auto kv:list)
+	{
+		std::cout << kv.first << "  " << kv.second<<std::endl;
+	}
+
+
+
+		//std::string fileName("lisat_zakupow.txt");
+		//std::ofstream file(fileName, std::ios::out | std::ios::trunc);
+		//if (file.is_open())
+		//{
+		//	if (file.good())
+		//	{
+		//		for (auto& kv : list)
+		//		{
+		//			file << kv.first << " " << kv.second << "\n";
+		//		}
+		//	}
+
+		//}
+		//else
+		//{
+		//	std::cout << "nie moge otworzyc pliku";
+		//	return -1;
+		//}
+		//file.close();
 
 				
-	}
+
 	return 0;
 }
