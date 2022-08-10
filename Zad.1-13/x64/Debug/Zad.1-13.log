@@ -1,0 +1,9 @@
+﻿  Zad.1-13.cpp
+D:\SDA\CPPZaawansowany\Zad.1-13\Zad.1-13.cpp(58,21): warning C4244: '=': conversion from '__int64' to 'int', possible loss of data
+D:\SDA\CPPZaawansowany\Zad.1-13\Zad.1-13.cpp(78,27): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+D:\SDA\CPPZaawansowany\Zad.1-13\Zad.1-13.cpp(80,67): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Zad.1-13.vcxproj -> D:\SDA\CPPZaawansowany\ListaZadanie2\x64\Debug\Zad.1-13.exe
