@@ -62,15 +62,15 @@ int main()
 
 
 
-    std::string fileName2("usersData.txt");
-    std::ofstream file2(fileName2, std::ios::out || std::ios::app);
+    std::string fileName2("usersData.csv");
+    std::ofstream file2(fileName2, std::ios::out || std::ios::trunc);
     if (file2.is_open())
     {
         for (int i = 0; i < badPassword.size(); ++i)
         {
             if (file2.good())
             {
-                file2 << badPassword[i].getLogin() << "," << badPassword[i].getPassword();
+                file2 << badPassword[i].getLogin() << "," << badPassword[i].getPassword()<<std::endl;
             }
         }
         file2.close();
