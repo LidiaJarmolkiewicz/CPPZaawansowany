@@ -180,23 +180,27 @@ std::vector<int> changeIntToNumber(int x)
     return vectInt;
 }
 //13. Napisz funkcjê, która znajdzie pierwsz¹ wiêksz¹ liczbê, która jest palindromem od zadanej liczby.
-std::vector<int> palindromOfNumber(int x)
+ int palindromNext(int x)
 {
-      std::vector<int> vecPalToNumber;
-      while (x != 0)
-      {
-          vecPalToNumber.push_back(x % 10);
-          x /= 10;
-      }
-         
-      return vecPalToNumber;
-      
-      std::vector<int> vecToCompare;
-      auto result = std::find((vecToCompare.begin(), vecToCompare.end(), [](int i) {};);
-        
-            (result != vecNumbers.end())
-         ? std::cout << "wektor zawiera" << n << "\n"
-         : std::cout << "wektor nie zawiera" << n << "\n";
+     
+     //std::vector<int> vecPalToNumber=changeIntToNumber(x);
+  
+     //std::reverse(vecPalToNumber.begin(), vecPalToNumber.end());
+
+     int temp = x;
+    int reverse = 0;
+    while (x != 0)
+    {
+        reverse = (reverse * 10) + x % 10;
+        x=x / 10;//odwrócona liczba
+
+    }
+    if (temp==reverse)
+        return 1;
+    else
+        return 0;
+   
+    
 
 }
 
@@ -293,6 +297,16 @@ int main()
     }
 
     std::cout << std::endl;
+    //13
     std::cout << "zadanie 13" << std::endl;
-    palindromOfNumber(13);
+    int n = 7589;
+    std::cout << "Palindrom  liczby" << n;
+    while (!palindromNext(n))
+    {
+        n = n + 1;
+   }
+    
+     std::cout<<" wynosi: "<< n;
+    
+    std::cout << std::endl;
 }
