@@ -1,0 +1,5 @@
+﻿  main.cpp
+  Point.cpp
+D:\SDA\OPP\Point\Point.cpp(37,25): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Generating Code...
+  Point.vcxproj -> D:\SDA\CPPZaawansowany\Plik_zadanie4_customers\x64\Debug\Point.exe
